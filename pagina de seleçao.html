@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Personagens - Legacies of Rulers</title>
+    <link rel="stylesheet" href="pagina de seleção-styles.css">
+</head>
+<body>
+
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <div class="rpg-loader">CARREGANDO...</div>
+        </div>
+    </div>
+
+    <div class="selection-container">
+        
+        <a href="index.html" class="back-button" id="btn-back">
+            &#x2190;
+        </a>
+
+        <div class="character-frames">
+            
+            <div class="character-frame" data-character="Rogue" 
+                 data-description="Um ladrão de rua com grande habilidade oculta para assassinato. Ágil e sorrateiro, ele se move nas sombras.">
+                <img src="ladino pagina de seleção.png" alt="Ladino" class="char-image">
+            </div>
+
+            <div class="character-frame" data-character="Prince" 
+                 data-description="Um líder nato, treinado na arte da guerra e da diplomacia. Sua armadura é um símbolo de justiça.">
+                <img src="guerreiro pagina de seleção.png" alt="Príncipe" class="char-image">
+            </div>
+
+            <div class="character-frame" data-character="Archer" 
+                 data-description="Uma elfa ágil e precisa, mestra do arco e flecha. Seus sentidos aguçados a tornam uma caçadora implacável.">
+                <img src="arqueira pagina de seleção.png" alt="Arqueira" class="char-image">
+            </div>
+            
+            <div class="character-frame" data-character="Viking" 
+                 data-description="Um guerreiro bárbaro, cuja força e fúria são lendárias. Seus punhos de ferro esmagam qualquer resistência.">
+                <img src="barbaro pagina de seleção.png" alt="Viking" class="char-image">
+            </div>
+
+            <div class="character-frame" data-character="Mage" 
+                 data-description="Um jovem arcano, com um vasto conhecimento de magia. Seu cajado canaliza energias místicas devastadoras.">
+                <img src="mago pagina de seleção.png" alt="Mago" class="char-image">
+            </div>
+            
+        </div>
+
+        <div class="rpg-footer">
+            <p>ESCOLHA UM CAMINHO</p>
+        </div>
+        
+    </div>
+
+    <div id="description-box" class="description-box">
+        <p id="description-text"></p>
+    </div>
+
+    <script src="pagina de seleção-script.js"></script>
+</body>
+</html>

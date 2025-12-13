@@ -1,0 +1,70 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; 
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Principal com a Arte de Fundo */
+.rpg-container {
+    width: 100vw; 
+    height: 100vh; 
+    /* Imagem principal como fundo */
+    background-image: url('fundo.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    /* Centraliza verticalmente o botão no meio da tela */
+    justify-content: center; 
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Container do Botão Principal (JOGAR) */
+.button-main-container {
+    /* Ajuste de margem para posicionar o botão exatamente onde o logo estava na sua imagem */
+    margin-top: 250px; 
+    margin-bottom: 0; 
+}
+
+/* Estilos do Botão Principal (JOGAR) */
+.rpg-button {
+    width: 100%;
+    /* Tamanho aumentado do botão */
+    max-width: 350px; 
+    cursor: pointer;
+    transition: transform 0.1s ease; 
+}
+
+/* Classe CSS para simular o estado "clicado" */
+.is-clicked {
+    transform: scale(0.95); 
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .button-main-container {
+        margin-top: 150px; /* Ajuste para telas menores */
+    }
+    .rpg-button {
+        max-width: 280px; /* Ajuste de tamanho para tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .button-main-container {
+        margin-top: 100px; /* Ajuste para celulares */
+    }
+    .rpg-button {
+        max-width: 200px; /* Ajuste de tamanho para celulares */
+    }
+}
