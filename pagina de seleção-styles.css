@@ -1,5 +1,5 @@
 /* ======================================================= */
-/* 1. ESTILOS GERAIS E LAYOUT PRINCIPAL (Fundo e Posicionamento) */
+/* 1. ESTILOS GERAIS E LAYOUT PRINCIPAL (selection.html) */
 /* ======================================================= */
 
 body {
@@ -15,24 +15,22 @@ body {
     height: 100vh; 
     
     /* Fundo Inicial (o fundo de estrelas) */
-    background-image: url('fundo.png'); 
+    background-image: url('fundo\ da\ pagina\ de\ seleção.png'); 
     
     /* Enquadramento em tela cheia */
     background-size: cover; 
-    background-position: center top; /* Foca na parte de cima da imagem */
+    background-position: center top; 
     background-repeat: no-repeat;
     
-    /* Transição suave para o fundo (embora o JS manipule a URL, isso prepara para transições mais suaves) */
+    /* Transição para troca de fundo via JS (para o hover) */
     transition: background-image 0.5s ease-in-out; 
     
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    /* Alinha o grupo de personagens e o rodapé na parte inferior */
-    justify-content: flex-end; 
+    justify-content: flex-end; /* Alinha o conteúdo na parte inferior */
     box-sizing: border-box;
-    /* Ajusta o padding para dar espaço ao rodapé fixo */
-    padding-bottom: 8vh; 
+    padding-bottom: 8vh; /* Espaço para o rodapé */
 }
 
 /* ======================================================= */
@@ -41,18 +39,26 @@ body {
 
 .character-frames {
     display: flex; 
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: flex-end; /* Alinha os quadros pela base (parte inferior) */
-    gap: 20px; /* Espaço entre os quadros */
-    z-index: 2; /* Garante que os personagens fiquem acima do rodapé */
+    justify-content: center; 
+    align-items: flex-end; 
+    gap: 20px; 
+    z-index: 2;
+    
+    /* CORREÇÃO PARA RESPONSIVIDADE EM CELULARES */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    overflow-x: auto; /* PERMITE A ROLAGEM HORIZONTAL SE O CONTEÚDO EXCEDER */
+    padding: 0 10px; /* Adiciona um pequeno padding nas laterais */
+    box-sizing: border-box;
 }
 
 .character-frame {
-    width: 180px; /* Tamanho do quadro (aumentado) */
+    /* O 'flex-shrink: 0' impede que os itens sejam espremidos em telas apertadas */
+    flex-shrink: 0; 
+    width: 180px; 
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(0.7); /* Escurece os não selecionados */
+    filter: brightness(0.7); 
 }
 
 .char-image {
@@ -63,8 +69,8 @@ body {
 
 /* Estado de Seleção (Quando a classe .selected é adicionada por clique) */
 .character-frame.selected {
-    transform: scale(1.15) translateY(-25px); /* Aumenta e levanta */
-    filter: brightness(1.0); /* Brilho total */
+    transform: scale(1.15) translateY(-25px); 
+    filter: brightness(1.0); 
     z-index: 5;
 }
 
@@ -201,9 +207,10 @@ body {
 }
 
 /* ======================================================= */
-/* 7. MEDIA QUERIES (Responsividade) */
+/* 7. MEDIA QUERIES (Responsividade para selection.html) */
 /* ======================================================= */
 
+/* Ajustes para Tablets e Monitores Menores (até 900px) */
 @media (max-width: 900px) {
     .character-frames {
         gap: 15px;
@@ -223,12 +230,16 @@ body {
     }
 }
 
+/* Ajustes para Celulares (até 600px) */
 @media (max-width: 600px) {
     .character-frames {
+        /* Garante que o espaçamento seja menor para caber mais */
         gap: 10px;
+        /* Remove o justify-content: center para permitir a rolagem a partir do centro */
+        justify-content: flex-start; 
     }
     .character-frame {
-        width: 100px; 
+        width: 100px; /* Tamanho mínimo do personagem no celular */
     }
     .back-button {
         font-size: 2em;
@@ -242,6 +253,7 @@ body {
         font-size: 1em;
         letter-spacing: 2px;
     }
+    /* Centraliza e torna a caixa de descrição mais compacta no celular */
     .description-box {
         width: 90%; 
         top: 10px;

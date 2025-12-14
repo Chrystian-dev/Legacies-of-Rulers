@@ -1,4 +1,7 @@
-/* Estilos Gerais */
+/* ======================================================= */
+/* 1. ESTILOS GERAIS E LAYOUT PRINCIPAL (index.html) */
+/* ======================================================= */
+
 body {
     margin: 0;
     padding: 0;
@@ -23,15 +26,14 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    /* Centraliza verticalmente o botão no meio da tela */
-    justify-content: center; 
+    justify-content: center; /* Centraliza o botão verticalmente */
     text-align: center;
     box-sizing: border-box;
 }
 
 /* Container do Botão Principal (JOGAR) */
 .button-main-container {
-    /* Ajuste de margem para posicionar o botão exatamente onde o logo estava na sua imagem */
+    /* Ajuste de margem para posicionar o botão sob o logo na arte de fundo */
     margin-top: 250px; 
     margin-bottom: 0; 
 }
@@ -39,7 +41,6 @@ body {
 /* Estilos do Botão Principal (JOGAR) */
 .rpg-button {
     width: 100%;
-    /* Tamanho aumentado do botão */
     max-width: 350px; 
     cursor: pointer;
     transition: transform 0.1s ease; 
@@ -50,21 +51,71 @@ body {
     transform: scale(0.95); 
 }
 
-/* Media Queries para Responsividade */
+/* ======================================================= */
+/* 2. TELA DE CARREGAMENTO (LOADER) */
+/* (Inclusão de funcionalidade de transição) */
+/* ======================================================= */
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; 
+    background-color: #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out, visibility 0.5s; 
+    visibility: visible;
+}
+
+#loader-wrapper.loaded {
+    opacity: 0; 
+    visibility: hidden; 
+    pointer-events: none; 
+}
+
+.rpg-loader {
+    font-size: 2em;
+    color: #f0e6d2; 
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff9900; 
+    font-weight: bold;
+    letter-spacing: 5px;
+    animation: pulse 1.5s infinite alternate; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.8; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+/* ======================================================= */
+/* 3. MEDIA QUERIES (Responsividade para index.html) */
+/* ======================================================= */
+
+/* Ajustes para Tablets */
 @media (max-width: 768px) {
     .button-main-container {
-        margin-top: 150px; /* Ajuste para telas menores */
+        margin-top: 150px; 
     }
     .rpg-button {
-        max-width: 280px; /* Ajuste de tamanho para tablets */
+        max-width: 280px; 
     }
 }
 
+/* Ajustes para Celulares */
 @media (max-width: 480px) {
     .button-main-container {
-        margin-top: 100px; /* Ajuste para celulares */
+        margin-top: 100px; 
     }
     .rpg-button {
-        max-width: 200px; /* Ajuste de tamanho para celulares */
+        max-width: 200px; 
+    }
+    .rpg-loader {
+        font-size: 1.5em; 
+        letter-spacing: 3px;
     }
 }
