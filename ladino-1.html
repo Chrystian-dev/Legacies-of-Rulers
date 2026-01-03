@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacies of Rulers - O Ladino</title>
+    <link rel="stylesheet" href="ladino-1.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="background-overlay"></div>
+
+        <div class="frame-container">
+            <img src="MODURA DO VIDE.png" class="rpg-frame" alt="Moldura">
+            
+            <div class="media-content">
+                <video id="intro-video" muted playsinline>
+                    <source src="seu_video_ladino.mp4" type="video/mp4">
+                </video>
+                <img id="final-image" src="SENA FINAL.png" class="hidden" alt="Cena Final">
+            </div>
+        </div>
+
+        <div id="dialogue-container" class="hidden">
+            <div class="text-box">
+                <p id="narrative-text"></p>
+                
+                <div id="choices-container" class="hidden">
+                    <div class="timer-wrapper">
+                        Tempo restante: <span id="countdown">20</span>s
+                    </div>
+                    <div class="button-group">
+                        <button class="choice-btn" onclick="makeChoice('fugir.html')">FUGIR PELA MULTIDÃO</button>
+                        <button class="choice-btn" onclick="makeChoice('esconder.html')">SE ESCONDER AQUI MESMO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ladino-1.js"></script>
+</body>
+</html>
