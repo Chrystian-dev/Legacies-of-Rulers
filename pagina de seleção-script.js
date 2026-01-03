@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedCharacterKey = '';
     
     // Fundo padrão (o fundo de estrelas)
-    const DEFAULT_BACKGROUND_URL = "url('fundo da pagina de seleção.png')"; 
+    const DEFAULT_BACKGROUND_URL = "url('./assets/fundo da pagina de seleção.png')"; 
     
     // Mapeamento dos fundos
     const backgroundMap = {
-        'Rogue': 'fundo do ladino.png', 
-        'Prince': 'fundo do guerreiro.png', 
-        'Archer': 'fundo da arqueira.png', 
-        'Viking': 'fundo do barbaro.png', 
-        'Mage': 'fundo do mago.png',
+        'Rogue': './assets/fundo do ladino.png', 
+        'Prince': './assets/fundo do guerreiro.png', 
+        'Archer': './assets/fundo da arqueira.png', 
+        'Viking': './assets/fundo do barbaro.png', 
+        'Mage': './assets/fundo do mago.png',
 
     };
     

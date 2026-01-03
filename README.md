@@ -18,7 +18,7 @@ Este é um projeto prático realizado com o objetivo de aplicar e consolidar con
 <br>
 
 <p align="center">
-  <img alt="prepré visualização" src="readme.png" width="100%">
+  <img alt="prepré visualização" src="./assets/readme.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias

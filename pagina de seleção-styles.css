@@ -15,7 +15,7 @@ body {
     height: 100vh; 
     
     /* Fundo Inicial (o fundo de estrelas) */
-    background-image: url('fundo\ da\ pagina\ de\ seleção.png'); 
+    background-image: url('./assets/fundo\ da\ pagina\ de\ seleção.png'); 
     
     /* Enquadramento em tela cheia */
     background-size: cover; 
