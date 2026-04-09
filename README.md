@@ -37,7 +37,7 @@ Interface de RPG de fantasia para web desenvolvida com tecnologias front-end (HT
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://chrystian-dev.github.io/Legacies-of-Rulers/index.html). Não é necessário ter conta no [github.com](https://github.com/) para acessá-lo.
+Você pode visualizar o layout do projeto através [DESSE LINK](https://chrystian-dev.github.io/Legacies-of-Rulers/index.html). Veja como foi o processo antes do codigo [figma.com]([https://github.com/](https://www.figma.com/design/NrUTthgFnwOBZJJi13A9mx/Untitled?node-id=0-1&p=f&t=T21rkjRAn4AWwosW-0)) para acessá-lo.
 
 ## :memo: Licença
 
